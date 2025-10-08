@@ -129,13 +129,20 @@ public class Player : Character
         velocity += new Vector3(touchVelocity.x, 0, touchVelocity.y) * (accel * Time.deltaTime);
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
     }
-
+    
     private void ProcessMouse()
     {
         touchVelocity = (Vector2)Input.mousePosition - lastTouchPos;
         lastTouchPos = Input.mousePosition;
+
+        // Raw values are 0-1, so minus half to get values useful for velocity
+        // This will go slow if you are close to player, and faster if you are further
+        // I should scale this in some fashion (log?)
+        var x = (lastTouchPos.x / Screen.width) - 0.5f;
+        var y = (lastTouchPos.y / Screen.height) - 0.5f;
         
-        velocity += new Vector3(touchVelocity.x, 0, touchVelocity.y) * (accel * Time.deltaTime);
+        //velocity += new Vector3(touchVelocity.x, 0, touchVelocity.y) * (accel * Time.deltaTime);
+        velocity += new Vector3(x, 0, y) * (accel * Time.deltaTime);
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
     }
     

@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Projectile_Basic : Projectile
 {
     public float checkRadius;
+    public float killTime = 3;
+    public GameObject baseModel;
     public override void Launch(WeaponConfig config, Character target = null)
     {
         base.Launch(config, target);
@@ -23,6 +26,8 @@ public class Projectile_Basic : Projectile
     public override void Kill()
     {
         _killing = true;
-        Destroy(this.gameObject, GetComponentInChildren<TrailRenderer>().time);
+        baseModel.SetActive(false);
+        //Destroy(this.gameObject, GetComponentInChildren<TrailRenderer>().time);
+        Destroy(this.gameObject, killTime);
     }
 }

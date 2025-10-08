@@ -82,5 +82,5 @@ public class UserProfile
         return profile;
     }
 
-    public static UserProfile CreateTemp() => UserProfile.Create("", "_");
+    public static UserProfile CreateTemp() => UserProfile.Create("", "Temp User 01");
 }
