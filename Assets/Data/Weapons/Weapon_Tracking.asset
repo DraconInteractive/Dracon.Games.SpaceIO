@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40308b33a1ae4e4691ea8c1ae407c91, type: 3}
+  m_Name: Weapon_Tracking
+  m_EditorClassIdentifier: 
+  baseDamage: 5
+  baseCooldown: 1
+  speed: 5
+  range: 7
+  autoFire: 1
+  projectile: {fileID: 4478484448714029950, guid: 942c25835f8fa4948876251dde8300fa,
+    type: 3}

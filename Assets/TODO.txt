@@ -1,0 +1,88 @@
+- Weapons
+  - Basic
+    - Tracking (D)
+    - Piercing (D)
+      - Boomerang (D) (pierce enemy, then return to player hitting enemies on the way)
+    - Ricochet (D)
+  - Explosions (AOE damage + movement impulse)
+    - Direct rpg
+    - Delayed explosion / grenade
+    - Mines
+  - Turrets (separate from player, last for x duration with their own health bar)
+    - Basic
+    - AOE pulse
+    - Slow / Tether
+  - Spinners (rotate around player dealing contact damage)
+  - Dart
+    - Conversion (enemy helps player for duration)
+    - Woozy / Drunk (enemy has random offset to movement)
+    - Sleep (enemy is stunned for duration)
+- Upgrades
+  - Shot effects
+    - Slow
+    - Lightning zap close enemies
+    - Freeze
+    - Poison
+  - Player effects
+    - Speed
+    - Health max
+    - Regen health (1 time)
+    - Regen health (over time)
+    - Renewable shield
+- Enemy archetypes
+  - Basic (D)
+  - Jitter (moves side to side to avoid attacks
+    - Blink (can teleport closer or further away)
+  - Shooter (can hit player from distance) (D)
+    - Infantry (shooter Lvl2, moves to within range of player, adjusts for player velocity)
+    - TODO: Add velocity tracking to Character and use it for predictive aiming
+  - Tank (slow, high health)
+    - Bullet Sink (absorbs damage for nearby enemies)
+    - Garrison (periodically shields)
+  - Multiplier (becomes multiple smaller enemies on death)
+  - Ghost (pack of enemies, but only one is real. All can deal damage. Kill real to kill all)
+  - Killing Field (3 enemies that deal damage in a triangular area between them)
+  - Priest (heals / buffs other enemies around them)
+    - Clergy (periodic heals)
+    - Warrior Nun (increases attack speed of nearby enemies)
+    - Tibetan Monk (high knockback, increases speed of nearby enemies)
+    - Monestary Quartermaster (increases attack of nearby enemies)
+  - Elite (high health, high damage, special effects like buffs or area effects)
+- Progression
+  - Level
+    - Determines enemy stats (health, speed, atk, etc)
+    - Level cap at X, but can still level up for rewards
+  - Aesthetic currency (IAP or gain through gameplay)
+    - Player aesthetics 
+    - Arena aesthetics
+  - Persistent upgrade currency (gain through gameplay)
+    - Health
+    - Speed
+    - Health Regen
+    - Currency Rate
+    - Exp Rate
+  - Daily missions (rewards currency etc)
+    - Procedural generation
+    - Types: 
+      - Survive for x seconds
+      - Kill x of enemy y
+      - Kill x enemies with y weapon
+  - Goals / Story Missions
+    - Achieve goals to progress story or unlock really cool rewards
+    - Types: 
+      - Gather resources (kill specific enemies to make them drop things you need to collect)
+      - Gather information (kill elites)
+      - Achieve level X (gates progress to specific level)
+      - Achieve new level (requires to ascend to new level)
+- FX (feel package)
+  - shot fx
+  - hit fx
+  - reward / event fx
+  - upgrade fx (movement trails etc)
+- UI
+  - enemy level
+  - player health
+  - active upgrades
+- Scope
+  - Story!
+  - Enemy/Ability packs
