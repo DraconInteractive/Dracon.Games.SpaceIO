@@ -32,6 +32,9 @@ public class Player : Character
 
     private void Update()
     {
+        // Full override of character update, not sure if this is sensible.
+        // Perhaps should have a function for processing velocity and override that instead.
+        
         if (Input.touchCount > 0)
         {
             ProcessTouch();
@@ -51,9 +54,10 @@ public class Player : Character
             transform.rotation = Quaternion.LookRotation(velocity.normalized);
         }
 
+        // Numerals toggle weapons, so you can have multiple. Press same number again to remove.
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (weapons.Any(x => x is Weapon_Basic))
+            if (weapons.Any(x => x is Weapon_Basic)) 
             {
                 RemoveWeapon<Weapon_Basic>();
             }
