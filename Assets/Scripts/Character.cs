@@ -26,7 +26,7 @@ public abstract class Character : SerializedMonoBehaviour
     public UnityAction onWeaponUpdate;
 
     private Vector3 _lastFramePos;
-    private Vector3 _velocity;
+    public Vector3 Velocity { get; private set; }
     
     public List<Weapon> weapons { get; private set; }
 
@@ -41,7 +41,7 @@ public abstract class Character : SerializedMonoBehaviour
 
     private void Update()
     {
-        _velocity = transform.position - _lastFramePos;
+        Velocity = transform.position - _lastFramePos;
     }
 
     private void LateUpdate()

@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
 
     public bool playerWeapon;
 
-    private Character _owner;
+    protected Character _owner;
 
     public void Initialize(Character owner, WeaponConfig weaponConfig, bool isPlayerWeapon)
     {
@@ -25,7 +25,8 @@ public class Weapon : MonoBehaviour
     {
         if (!_owner.alive) return;
 
-            FindTargets();
+        FindTargets();
+        
         if (cooldown > 0)
         {
             cooldown -= Time.deltaTime;
@@ -62,6 +63,7 @@ public class Weapon : MonoBehaviour
     {
         if (playerWeapon)
         {
+            // ToList to avoid multiple enumeration I guess?
             _targetsInRange = EnemyManager.Instance.GetEnemiesInRange(transform.position, config.range)
                 .OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).Cast<Character>().ToList();
         }
